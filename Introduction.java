@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 public class Introduction
 {
   public static void fibonacci()
@@ -254,14 +254,14 @@ public class Introduction
      }
       
       
-     public static void sign()
-     {
-         Scanner input = new Scanner(System.in);
-         System.out.println("Enter the sign");
-         String sign = input.nextLine();
-         if()
+    //  public static void sign()
+    //  {
+    //      Scanner input = new Scanner(System.in);
+    //      System.out.println("Enter the sign");
+    //      String sign = input.nextLine();
+    //      if()
         
-     }
+    //  }
 
     //There are 8 integers stored in an array. They are:  25, 78, 43, 58, 90, 87, 5, 98. 
     //Write a java program to separate those integers into odd and even numbers in two separate arrays.
@@ -314,7 +314,52 @@ public class Introduction
              System.out.println(" Equal array");
         
       }
+public static void swap(int a[],int i, int j)
+{
+  int temp = a[i] ;
+   a[i]= a[j];
+   a[j] = temp;
+}
+//bubble sort 
+ public static void bubblesort()
+ { 
+  int a[] = {3,2,5,6,1,8};
+  int temp;
+  for(int i=0;i<a.length;i++)
+  {
+    for(int j=i+1;j<a.length-1;j++)
+    {
+      if(a[i]>a[j])
+      {
+        //  temp =a[i];
+        // a[i] = a[j];
+        // a[j] = temp;
+        swap(a,i,j);
+      }
+       
+    }
+  }
+  System.out.print(Arrays.toString(a));
+ }
 
+  public static void insertion()
+  {
+   int a[] = {3,2,7,1,77};
+        for(int i = 1;i<a.length;i++ )
+        {
+          int key = a[i];
+          int j = i-1;
+          while( j>=0 && key<a[j])
+          {
+                a[j+1] = a[j];
+                j--;
+          }
+          a[j+1] = key;
+        }
+        System.out.println(Arrays.toString(a));
+  }
+
+    
 
     public static void main(String args[])
     {
@@ -329,9 +374,10 @@ public class Introduction
        //dowhilecheck();
        //maxmin();
        //test;
-       sign();
+       //sign();
        //Array1();
-
+       //bubblesort();
+       //insertion();
        /*int[] A={1,5,3,24};
        int[] B={1,2,3,24};
        equalarray(A,B);*/
